@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Download data from the ICES Stock Assessment database.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for load_sag {icesFO}"><tr><td>load_sag {icesFO}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Download data from the ICES Stock Assessment database.</h2>
+
+<h3>Description</h3>
+
+<p>Download data from the ICES Stock Assessment database for the year in
+which you are producing the Fisheries Overviews. Form SAG
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+load_sag_summary(year)
+
+load_sag_refpts(year)
+
+load_sag_status(year)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>year</code></td>
+<td>
+<p>the year for which data is required.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A data frame..
+</p>
+
+
+<h3>Note</h3>
+
+<p>Can add some helpful information here
+</p>
+
+
+<h3>References</h3>
+
+<p>The ICES stock assessment graphs Database web sevices: <a href="http://standardgraphs.ices.dk/stockList.aspx">http://standardgraphs.ices.dk/stockList.aspx</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="load_sid.html">load_sid</a></code> for loading data from the ICES Stock Information database.
+</p>
+<p><code><a href="icesFO-package.html">icesFO-package</a></code> gives an overview of the package.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+sag_summary_raw &lt;- load_sag_summary(2019)
+sag_refpts_raw &lt;- load_sag_refpts(2019)
+sag_status_raw &lt;- load_sag_status(2019)
+
+## End(Not run)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>icesFO</em> version 1.0.0.9003 <a href="00Index.html">Index</a>]</div>
+</body></html>

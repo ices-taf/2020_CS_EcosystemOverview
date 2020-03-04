@@ -1,0 +1,72 @@
+CLD_trends              Catch, discards, and landings by stock
+compute_technical_interactions
+                        Compute a matrix of technical interactions.
+format_annex_table      Format the SAG status data for its use as an
+                        annex table.
+format_catches          Format the data from the time-series of ICES
+                        historical, official and preliminary catches.
+format_sag              Format the data from the ICES Stock Assessment
+                        Database.
+format_sag_status       Format the stock status data as is in the ICES
+                        Stock Assessment Database.
+format_sid              Format the data from the ICES Stock Information
+                        Database.
+format_stecf            Format the data from STECF effort and landings
+guild_trends            Wrangling of format_sag output
+icesFO-package          Functions to support the creation of ICES
+                        Fisheries Overviews
+load_areas              Download ICES areas polygons
+load_asfis_species      Download ASFIS Species list from FAO.
+load_catches            Download catch data from ICES web services.
+load_ecoregion          Download ecoregion polygons
+load_sag                Download data from the ICES Stock Assessment
+                        database.
+load_sid                Download data from the ICES Stock Information
+                        Database.
+load_statrec2ecoregions
+                        Download a statistical rectangles mapped to
+                        ecoregion
+plot_CLD_bar            Returns an ordered plot of catch bars colored
+                        according to F/F<sub>MSY</sub> and SSB/MSY
+                        B<sub>trigger</sub> by fish category and
+                        ecoregion
+plot_GES_pies           Returns an ordered plot of catch bars colored
+                        according to F/F<sub>MSY</sub> and SSB/MSY
+                        B<sub>trigger</sub> by fish category and
+                        ecoregion
+plot_catch_trends       Returns an ordered plot of catch bars colored
+                        according to F/F<sub>MSY</sub> and SSB/MSY
+                        B<sub>trigger</sub> by fish category and
+                        ecoregion
+plot_discard_current    Returns a plot of discard rate by fish category
+                        for an ecoregion in the last assessment year.
+plot_discard_trends     Returns a plot of discard rate trends by fish
+                        category for an ecoregion.
+plot_ecoregion_map      Returns an map of the ecoregion and the
+                        divisions included in it
+plot_effort_map         Returns an map of the ecoregion and the
+                        divisions included in it
+plot_guild_trends       Plotting time series of F/Fmsy and SSB/MSY B
+                        trigger by guilds. This plots are used int the
+                        Ecosystem Overviews.
+plot_kobe               Returns a scatterplot of F/F<sub>MSY</sub> and
+                        SSB/MSY B<sub>trigger</sub> by fish category
+                        and ecoregion
+plot_sar_map            Returns an map of the ecoregion and the
+                        divisions included in it
+plot_status_prop_pies   Returns an ordered plot of catch bars colored
+                        according to F/F<sub>MSY</sub> and SSB/MSY
+                        B<sub>trigger</sub> by fish category and
+                        ecoregion
+plot_stecf              STECF Landings over time by country, guild, or
+                        species
+plot_stock_trends       Plotting time series of F/Fmsy and SSB/MSY B
+                        trigger for all stocks with data available by
+                        guild.
+plot_technical_interactions
+                        Visualise a matrix of technical interactions.
+plot_vms                VMS Effort and landings over time by country or
+                        gear
+stock_trends            Wrangling of format_sag output
+stockstatus_CLD_current
+                        Stock status relative to reference points

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Format the data from STECF effort and landings</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for format_stecf {icesFO}"><tr><td>format_stecf {icesFO}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Format the data from STECF effort and landings</h2>
+
+<h3>Description</h3>
+
+<p>Format the data from STECF effort and landings for the specific Ecoregion
+for which you are producing the Fisheries Overviews.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+format_stecf_effort(x)
+
+format_stecf_landings(x)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>the name of the dataframe with effort data</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>These two dataframes have to be downloaded by hand and put in the data folder. 
+The proper Annexes have to decided by the user.
+</p>
+
+
+<h3>Value</h3>
+
+<p>a data frame of stock status relative to reference points and catch, discards, and landings
+by stock for the most recent assessment.
+</p>
+
+
+<h3>Note</h3>
+
+<p>Some considerable errors have been identified in the STECF data. Finland and Estonia effort data are not reliable,
+and Germany recorded an erroneous haul in 2013. These values have been removed.
+</p>
+<p>Can add some helpful information here
+</p>
+
+
+<h3>References</h3>
+
+<p>STECF dissemination tool https://stecf.jrc.ec.europa.eu/web/stecf/dd/effort/graphs-annex
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="format_sag.html">format_sag</a></code> for formatting raw data from the ICES Stock Assessment database. 
+</p>
+<p><code><a href="icesFO-package.html">icesFO-package</a></code> gives an overview of the package.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+stecf_formatted &lt;- format_stecf("Celtic Seas")
+
+## End(Not run)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>icesFO</em> version 1.0.0.9003 <a href="00Index.html">Index</a>]</div>
+</body></html>

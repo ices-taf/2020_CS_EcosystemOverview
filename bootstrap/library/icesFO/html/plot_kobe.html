@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Returns a scatterplot of F/F&lt;sub&gt;MSY&lt;/sub&gt; and SSB/MSY...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for plot_kobe {icesFO}"><tr><td>plot_kobe {icesFO}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Returns a scatterplot of F/F&lt;sub&gt;MSY&lt;/sub&gt; and SSB/MSY B&lt;sub&gt;trigger&lt;/sub&gt;
+by fish category and ecoregion</h2>
+
+<h3>Description</h3>
+
+<p>Wrangling of format_sag output to obtain a dataframe with time-series of F, Fmsy, SSB and MSY B trigger for
+each stock in the Ecoregion, according to the last assessment (relative to the set year)
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+plot_kobe(x, guild, caption = FALSE, cap_year, cap_month,
+  return_data = FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>a dataframe output of stockstatus+catch_current.R</p>
+</td></tr>
+<tr valign="top"><td><code>guild</code></td>
+<td>
+<p>an identifier of the Fisheries guild to plot</p>
+</td></tr>
+<tr valign="top"><td><code>caption</code></td>
+<td>
+<p>logical flag</p>
+</td></tr>
+<tr valign="top"><td><code>cap_year</code></td>
+<td>
+<p>the year to be shown in the figure caption</p>
+</td></tr>
+<tr valign="top"><td><code>cap_month</code></td>
+<td>
+<p>the month to be shown in the figure caption, the accession date to SAG usually</p>
+</td></tr>
+<tr valign="top"><td><code>return_data</code></td>
+<td>
+<p>a parameter indicating if the data behind the plot should be returned as a dataframe</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A plot
+</p>
+
+
+<h3>Note</h3>
+
+<p>Can add some helpful information here
+</p>
+
+
+<h3>References</h3>
+
+<p>The ICES stock information Database web sevices: <a href="http://sid.ices.dk/services/">http://sid.ices.dk/services/</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="plot_kobe.html">plot_kobe</a></code> Stock status relative to reference points. 
+</p>
+<p><code><a href="icesFO-package.html">icesFO-package</a></code> gives an overview of the package.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+plot1 &lt;- plot_kobe(CLDstatus, guild="Demersal", return_data = TRUE)
+
+## End(Not run)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>icesFO</em> version 1.0.0.9003 <a href="00Index.html">Index</a>]</div>
+</body></html>

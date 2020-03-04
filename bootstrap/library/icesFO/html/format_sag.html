@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Format the data from the ICES Stock Assessment Database.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for format_sag {icesFO}"><tr><td>format_sag {icesFO}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Format the data from the ICES Stock Assessment Database.</h2>
+
+<h3>Description</h3>
+
+<p>Format the data from the ICES Stock Assessment Database for the downloaded year and the specific Ecoregion
+for which you are producing the Fisheries Overviews.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+format_sag(x, y, year, ecoregion)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>a dataframe output from load_sag_summary() required.</p>
+</td></tr>
+<tr valign="top"><td><code>y</code></td>
+<td>
+<p>a dataframe output from load_sag_refpts() required.</p>
+</td></tr>
+<tr valign="top"><td><code>year</code></td>
+<td>
+<p>the year for which data is required.</p>
+</td></tr>
+<tr valign="top"><td><code>ecoregion</code></td>
+<td>
+<p>an identifier of the Ecoregion of interest</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A data frame..
+</p>
+
+
+<h3>Note</h3>
+
+<p>Can add some helpful information here
+</p>
+
+
+<h3>References</h3>
+
+<p>The ICES stock information Database web sevices: <a href="http://sid.ices.dk/services/">http://sid.ices.dk/services/</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="format_sid.html">format_sid</a></code> for formatting raw data from the ICES Stock Information database. 
+</p>
+<p><code><a href="icesFO-package.html">icesFO-package</a></code> gives an overview of the package.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+sag_format &lt;- format_sag(x,y, "Celtic Seas")
+
+## End(Not run)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>icesFO</em> version 1.0.0.9003 <a href="00Index.html">Index</a>]</div>
+</body></html>

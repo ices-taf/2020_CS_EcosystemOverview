@@ -1,0 +1,33 @@
+---
+title: "`r basename(getwd())`"
+output: github_document
+---
+
+## List of plots in report folder:
+
+```{r getPlots, results = "asis", format = "markdown", echo = FALSE}
+# which overview is this
+
+FO <- gsub("FisheriesOverview", "", basename(getwd()))
+
+# get list of plots
+plots <- dir(path = "report", pattern = "*.png")
+
+# order them:
+id <- gsub(".*?Figure([0-9]+).*", "\\1", plots)
+plots <- plots[order(as.numeric(id))]
+
+plot_names <- gsub(paste0("(", FO, ")|(.png)"), "", plots)
+
+raw_url <- paste0("https://raw.githubusercontent.com/ices-taf/", FO, "FisheriesOverview/taf/")
+
+string <- "### %3$s\n![%1$sreport/%2$s](report/%2$s)\n\n"
+
+for (i in seq_along(plots)) {
+  cat(sprintf(string, raw_url, plots[i], plot_names[i]))
+}
+```
+
+
+
+

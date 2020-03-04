@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Returns an map of the ecoregion and the divisions included in...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for plot_effort_map {icesFO}"><tr><td>plot_effort_map {icesFO}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Returns an map of the ecoregion and the divisions included in it</h2>
+
+<h3>Description</h3>
+
+<p>Returns an map of the ecoregion and the divisions included in it
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+plot_effort_map(effort, ecoregion)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>effort</code></td>
+<td>
+<p>a dataframe of effort data with a WKT columns (see notes)</p>
+</td></tr>
+<tr valign="top"><td><code>ecoregion</code></td>
+<td>
+<p>a dataframe output of load_ecoregion( ... )</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A ggplot object
+</p>
+
+
+<h3>Note</h3>
+
+<p>The effort data.frame is conveted to an sf object for plotting and
+is expeted to have a Well Known Text column containing polygons
+of c-squares
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="plot_ecoregion_map.html">plot_ecoregion_map</a></code> plots ICES areas and ecoregion.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+ecoregion &lt;- load_ecoregion("Baltic Sea")
+effort &lt;- icesVMS::get_effort_map("Baltic Sea")
+
+# convert to sf
+effort &lt;- sf::st_as_sf(effort, wkt = "wkt", crs = 4326)
+
+# select gears to plot
+gears &lt;- c("Static", "Midwater", "Otter", "Demersal seine")
+effort &lt;- effort[effort$fishing_category_FO %in% gears,]
+
+plot1 &lt;- plot_effort_map(effort, ecoregion)
+
+## End(Not run)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>icesFO</em> version 1.0.0.9003 <a href="00Index.html">Index</a>]</div>
+</body></html>

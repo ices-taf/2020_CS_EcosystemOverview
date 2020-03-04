@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Compute a matrix of technical interactions.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for compute_technical_interactions {icesFO}"><tr><td>compute_technical_interactions {icesFO}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Compute a matrix of technical interactions.</h2>
+
+<h3>Description</h3>
+
+<p>Based on landings and catches by species and gear, compute
+a matrix of technical interaction values and main gear contributions.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+compute_technical_interactions(x, threshByCatch = 5,
+  thresholdMainGear = 0.8, thresholdCoCatches = 0.5,
+  catchCoverage = 0.95)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>a dataframe in the same format as the STECF data.</p>
+</td></tr>
+<tr valign="top"><td><code>threshByCatch</code></td>
+<td>
+<p>minimum tonnage for a species to be considered
+a by catch (default 5)</p>
+</td></tr>
+<tr valign="top"><td><code>thresholdMainGear</code></td>
+<td>
+<p>a threshold for including gears contributing 
+to co-catches, to retain only the gear with the greatest contribution
+set this to 1 (default is 0.8)</p>
+</td></tr>
+<tr valign="top"><td><code>thresholdCoCatches</code></td>
+<td>
+<p>a proportion giving the threshold for when 
+we decide that there is co-catches (default 0.5)</p>
+</td></tr>
+<tr valign="top"><td><code>catchCoverage</code></td>
+<td>
+<p>the propotion of total catch to cover in the tables
+i.e. 0.95 gives a table convering 95% of the total catch (default 0.95)</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A list with four elements, technical interactions for landings (recapLand)
+and catch (recapCatch) and tables of main gears involved in the interactions
+based on landings (MainGearsLandings) and catches (MainGearsCatches)
+</p>
+
+
+<h3>Note</h3>
+
+<p>Technical interaction appears between stocks when they are caught by the same 
+gear during a fishing operation. Ideally the technical interaction should then 
+be studied at the scale of the fishing operation to prevent artificially creating 
+technical interaction between stocks that might only be caught at day/night or in 
+different areas/timing of the year. However, often, the finest available information 
+is per stock/gear/area/season. Knowing these limitations, the methodology used here 
+consists in computing the sum of landings per strata of one species given that a 
+second species is also present in the landings of this strata and then dividing 
+this number by the total landings of the first species:
+</p>
+<p style="text-align: center;"><i>
+      T(i,j)=(sum_s L(s,j)*P(s,j)) / (sum_s L(s,i)) *100</i></p>
+
+<p>Where T is the value of the technical interaction, i and j are the two species for 
+which the technical interaction is assessed. P is an indicator variable and equals 
+0 if the total landings of a species for a for a given strata is less than 5
+total landings for that strata and 1 otherwise. L is the landings for a given 
+species and strata.
+</p>
+<p>Strata corresponds to the provided disaggregation of the landings.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="plot_technical_interactions.html">plot_technical_interactions</a></code> for plotting technical interactions.
+</p>
+<p><code><a href="icesFO-package.html">icesFO-package</a></code> gives an overview of the package.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+technical_interacton &lt;- 
+  compute_technical_interactions(STECF_landings, catchCoverage = 0.99)
+
+plot_technical_interactions(technical_interacton$recapLand)
+
+## End(Not run)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>icesFO</em> version 1.0.0.9003 <a href="00Index.html">Index</a>]</div>
+</body></html>

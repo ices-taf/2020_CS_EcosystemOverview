@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Download catch data from ICES web services.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for load_catches {icesFO}"><tr><td>load_catches {icesFO}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Download catch data from ICES web services.</h2>
+
+<h3>Description</h3>
+
+<p>Download historical and current catches data from the ICES web services
+also preliminary catches can be downloaded for the current year
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+load_historical_catches()
+
+load_official_catches()
+
+load_preliminary_catches(year)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>year</code></td>
+<td>
+<p>the year for which data is required.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A data frame..
+</p>
+
+
+<h3>Note</h3>
+
+<p>Can add some helpful information here
+</p>
+
+
+<h3>References</h3>
+
+<p>The ICES stock information Database web sevices: <a href="http://sid.ices.dk/services/">http://sid.ices.dk/services/</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="load_sag.html">load_sag</a></code> for loading data from the ICES Stock Assessment database. 
+</p>
+<p><code><a href="icesFO-package.html">icesFO-package</a></code> gives an overview of the package.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+catches_hist_raw &lt;- load_historical_catches()
+catches_official_raw &lt;- load_official_catches()
+catches_prelim_raw &lt;- load_preliminary_catches()
+
+## End(Not run)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>icesFO</em> version 1.0.0.9003 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Visualise a matrix of technical interactions.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for plot_technical_interactions {icesFO}"><tr><td>plot_technical_interactions {icesFO}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Visualise a matrix of technical interactions.</h2>
+
+<h3>Description</h3>
+
+<p>Based on a matrix of technical interactions produce an image plot
+with a legend.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+plot_technical_interactions(x, col = heat.colors(5, rev = TRUE))
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>a square matrix with identical row and column names containing
+values of tecnical interaction between species</p>
+</td></tr>
+<tr valign="top"><td><code>col</code></td>
+<td>
+<p>a vector of colours to use on the image plot</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A list with four elements, technical interactions for landings (recapLand)
+and catch (recapCatch) and tables of main gears involved in the interactions
+based on landings (MainGearsLandings) and catches (MainGearsCatches)
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="compute_technical_interactions.html">compute_technical_interactions</a></code> for computing technical interactions.
+</p>
+<p><code><a href="icesFO-package.html">icesFO-package</a></code> gives an overview of the package.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+technical_interacton &lt;- 
+  compute_technical_interactions(STECF_landings, catchCoverage = 0.99)
+
+plot_technical_interactions(technical_interacton$recapLand)
+
+## End(Not run)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>icesFO</em> version 1.0.0.9003 <a href="00Index.html">Index</a>]</div>
+</body></html>

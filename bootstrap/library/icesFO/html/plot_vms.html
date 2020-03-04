@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: VMS Effort and landings over time by country or gear</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for plot_vms {icesFO}"><tr><td>plot_vms {icesFO}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>VMS Effort and landings over time by country or gear</h2>
+
+<h3>Description</h3>
+
+<p>The <code>stecf_plot</code> function returns an area or line plot of landings (historic and official catch) for an ecoregion by country
+guild, or species.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+plot_vms(x, metric = NULL, type = NULL, cap_year, cap_month,
+  line_count, return_data = FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>a dataframe resulting from icesVMS::get_fo_effort() or icesVMS::get_fo_landings()</p>
+</td></tr>
+<tr valign="top"><td><code>metric</code></td>
+<td>
+<p>either &quot;effort&quot; or &quot;landings&quot;</p>
+</td></tr>
+<tr valign="top"><td><code>type</code></td>
+<td>
+<p>either &quot;country&quot; or &quot;gear_category&quot;</p>
+</td></tr>
+<tr valign="top"><td><code>cap_year</code></td>
+<td>
+<p>the year to be shown in the figure caption</p>
+</td></tr>
+<tr valign="top"><td><code>cap_month</code></td>
+<td>
+<p>the month to be shown in the figure caption, the accession date to SAG usually</p>
+</td></tr>
+<tr valign="top"><td><code>line_count</code></td>
+<td>
+<p>indicates the number of lines to be shown in the graph</p>
+</td></tr>
+<tr valign="top"><td><code>return_data</code></td>
+<td>
+<p>a parameter indicating if the data behind the plot should be returned as a dataframe</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A ggplot2 object
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+vms_plot("Greater North Sea Ecoregion", 
+           metric = "effort", 
+           type = "gear_category",
+           line_count = 4)
+
+## End(Not run)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>icesFO</em> version 1.0.0.9003 <a href="00Index.html">Index</a>]</div>
+</body></html>

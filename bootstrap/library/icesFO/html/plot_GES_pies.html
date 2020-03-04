@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Returns an ordered plot of catch bars colored according to...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for plot_GES_pies {icesFO}"><tr><td>plot_GES_pies {icesFO}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Returns an ordered plot of catch bars colored according to 
+F/F&lt;sub&gt;MSY&lt;/sub&gt; and SSB/MSY B&lt;sub&gt;trigger&lt;/sub&gt;
+by fish category and ecoregion</h2>
+
+<h3>Description</h3>
+
+<p>Wrangling of format_sag output to obtain a dataframe with time-series of F, Fmsy, SSB and MSY B trigger for
+each stock in the Ecoregion, according to the last assessment (relative to the set year)
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+plot_GES_pies(x, y, cap_month = "August", cap_year = "2019",
+  return_data = FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>a dataframe output of format_sag_status.R</p>
+</td></tr>
+<tr valign="top"><td><code>y</code></td>
+<td>
+<p>a dataframe output of stockstatus_CLD_current.R</p>
+</td></tr>
+<tr valign="top"><td><code>cap_month</code></td>
+<td>
+<p>the month to be shown in the figure caption, the accession date to SAG usually</p>
+</td></tr>
+<tr valign="top"><td><code>cap_year</code></td>
+<td>
+<p>the year to be shown in the figure caption</p>
+</td></tr>
+<tr valign="top"><td><code>return_data</code></td>
+<td>
+<p>a parameter indicating if the data behind the plot should be returned as a dataframe</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A plot
+</p>
+
+
+<h3>Note</h3>
+
+<p>Can add some helpful information here
+</p>
+
+
+<h3>References</h3>
+
+<p>The ICES stock information Database web sevices: <a href="http://sid.ices.dk/services/">http://sid.ices.dk/services/</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="plot_CLD_bar.html">plot_CLD_bar</a></code> Stock status relative to reference points. 
+</p>
+<p><code><a href="icesFO-package.html">icesFO-package</a></code> gives an overview of the package.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+plot1 &lt;- plot_CLD_bar(CLDstatus, guild="Demersal", return_data = TRUE)
+
+## End(Not run)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>icesFO</em> version 1.0.0.9003 <a href="00Index.html">Index</a>]</div>
+</body></html>
